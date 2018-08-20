@@ -51,12 +51,14 @@ class Nameinfo extends React.Component {
     <div>
     <label htmlFor="firstname">FirstName</label>
                 <input
+                    required
                     type="firstname"
                     id="firstname"
                     name="firstname"
                     placeholder="Enter a valid name"
                     value={data.firstname}
                     onChange={this.onChange}
+                    errorText={this.state.firstnameError}
                 />
 </div>
 </div>

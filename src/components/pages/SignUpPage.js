@@ -3,11 +3,12 @@ import Nameinfo from '../Userdetails/Nameinfo';
 import USaddress from '../Userdetails/USaddress';
 import CountryAddress from '../Userdetails/CountryAddress';
 import USemergency from '../Userdetails/USemergency';
-import Homecounty from '../Userdetails/USemergency';
+import Homecountry from '../Userdetails/Homecountry';
 import Worksite from '../Userdetails/Worksite';
 import { Button, Grid } from 'semantic-ui-react';
 import { connect } from "react-redux";
 import { signupUser} from "../../redux/actions/index";
+import Signupform from "../forms/Signupform";
 import "../../App.css";
 
 
@@ -15,6 +16,11 @@ class SignUpPage extends React.Component {
     constructor(props){
         super(props);
     }
+
+    submit = data => {
+        this.props.dispatch(signupUser("firstname","middlename", "lastname","email",
+        "phone","address","apt","city","state","zipcode","fullname","clientname","address1"));
+    };
 
     componentWillReceiveProps(nextProps){
         if(nextProps.isUserSignedIn){
@@ -24,24 +30,27 @@ class SignUpPage extends React.Component {
                 console.log(this.props.state.data);
         }
     }
-    submit = data => {
-        this.props.dispatch(signupUser("firstname","middlename", "lastname","email",
-        "phone","address","apt","city","state","zipcode","fullname","clientname","address1"));
-    };
+  
 
     render() {
         return (
-            <div> 
+            <div > 
+                <div  className="emp_headrer App"> 
                 <h1>Employee Registration</h1>
+                </div>
                 
                 <Nameinfo/>
                 <USaddress/>
                 <CountryAddress/>
                 <USemergency/>
-                <Homecounty/>
+                <Homecountry/>
                 <Worksite/>
+
+                  <div  className="App"> 
+                 <Button primary onClick={this.submit}> Register </Button>
+                </div>
                    
-          <Button primary onClick={this.submit}> Register </Button>
+          
             </div>
         );
     }

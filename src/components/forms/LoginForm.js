@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
     validate = data => {
         const errors = {};
         if (!Validator.isEmail(data.email)) errors.email = "Invalid Email";
-        if (!data.password) errors.password = "Can't be empty";
+        if (!data.password) errors.password = "password is invalid";
         if (!data.username) errors.username = "Can't be empty";
         if (!data.nickname) errors.nickname = "";
         

@@ -1,15 +1,24 @@
 import * as Type from "../actions/ActionTypes";
 
 const initialState = {
-  username: "",
+ 
   firstname: "",
+  middlename: "",
   lastname: "",
   emailId: "",
-  password: "",
+  phone: "",
+  address: "",
+  address1: "",
+  apt: "",
+  city: "",
+  state: "",
+  place: "",
+  zipcode: "",
+  fullname: "",
+  clientname: "",
   userObject: "",
   isUserSignedIn: false,
   
- 
 };
 
 const handleSignupServerResponseSuccess = (state, action) => {

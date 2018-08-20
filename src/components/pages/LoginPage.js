@@ -9,7 +9,7 @@ class LoginPage extends React.Component {
         super(props);
     }
     submit = data => {
-        this.props.dispatch(loginUser(data.email, data.password));
+        this.props.dispatch(loginUser(data.email, data.password,data.username,data.nickname));
     };
     componentWillReceiveProps(nextProps){
         if(nextProps.isUserLoggedIn){
@@ -37,7 +37,7 @@ class LoginPage extends React.Component {
             <div>
                 <h1>Login Page</h1>
           <LoginForm {...this.props} submit={this.submit}></LoginForm>
-          <br/>
+          
 
           <Button className="App" primary onClick={this.onSingupClicked}> SignUp</Button>
             </div>

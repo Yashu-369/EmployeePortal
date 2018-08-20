@@ -1,10 +1,13 @@
 import * as Type from "./ActionTypes";
 
-export const loginUser = (username, password) => {
+export const loginUser = (emailID, password,username,nickname) => {
   return {
     type: Type.LOGIN_USER,
+    emailID,
+    password,
     username,
-    password
+    nickname
+
   };
 };
 
