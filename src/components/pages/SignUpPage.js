@@ -8,7 +8,7 @@ import Worksite from '../Userdetails/Worksite';
 import { Button, Grid } from 'semantic-ui-react';
 import { connect } from "react-redux";
 import { signupUser} from "../../redux/actions/index";
-import Signupform from "../forms/Signupform";
+import Signupform from '../forms/Signupform';
 import "../../App.css";
 
 
@@ -25,9 +25,9 @@ class SignUpPage extends React.Component {
     componentWillReceiveProps(nextProps){
         if(nextProps.isUserSignedIn){
                 console.log("sign up success")
-                console.log(nextProps.username + " - username ");
-                console.log(nextProps.email + " - email ");
-                console.log(this.props.state.data);
+                //console.log(nextProps.username + " - username ");
+                //console.log(nextProps.email + " - email ");
+               // console.log(nextProps.firstname +"- firstname");
         }
     }
   
@@ -39,15 +39,16 @@ class SignUpPage extends React.Component {
                 <h1>Employee Registration</h1>
                 </div>
                 
-                <Nameinfo/>
+                {/* <Nameinfo/>
                 <USaddress/>
                 <CountryAddress/>
                 <USemergency/>
                 <Homecountry/>
-                <Worksite/>
+                <Worksite/> */}
+               <Signupform  {...this.props} submit={this.submit}></Signupform>
 
                   <div  className="App"> 
-                 <Button primary onClick={this.submit}> Register </Button>
+                 <Button primary onClick={this.submit}> Save </Button>
                 </div>
                    
           

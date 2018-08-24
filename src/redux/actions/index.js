@@ -11,25 +11,24 @@ export const loginUser = (emailID, password,username,nickname) => {
   };
 };
 
-export const signupUser = (firstname,middlename, lastName, email, phone, address, address1, place,
-  state,city,zipcode, apt, fullname,clientname) => {
+
+export const signupUser = (firstname,middlename, lastName, email, phone, address, apt,
+  city,state,zipcode,fullname,clientname,address1) => {
   return {
     type: Type.SIGNUP_USER,
-    firstname,
-    middlename,
-    lastName,
-    email,
-    phone,
-    address,
-    address1,
-    place,
-    state,
-    city,
-    zipcode,
-    apt,
-    fullname,
-    clientname
-
+        firstname,
+        middlename,
+        lastName, 
+        email,
+        phone,
+        address, 
+        apt,
+        city,
+        state,
+        zipcode,
+        fullname,
+        clientname,
+        address1
   };
 };
 

@@ -54,7 +54,7 @@ class Homecountry extends React.Component {
         return (
 
 
-<div class="ui two column grid">
+{/* <div class="ui two column grid">
 <div>
 <h5> *Please provide emergency contact number from your home country</h5>
 </div>
@@ -118,7 +118,7 @@ class Homecountry extends React.Component {
 <div class="two wide column"></div>
 
 
-</div>
+</div> */}
         );
     }
 }

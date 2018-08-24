@@ -2,20 +2,19 @@ import * as Type from "../actions/ActionTypes";
 
 const initialState = {
  
-  firstname: "",
+  firstname:"",
   middlename: "",
   lastname: "",
-  emailId: "",
+   email: "", 
   phone: "",
-  address: "",
-  address1: "",
-  apt: "",
-  city: "",
-  state: "",
-  place: "",
-  zipcode: "",
-  fullname: "",
-  clientname: "",
+   address:"",
+   apt:"",
+   city:"",
+    state:"",
+  zipcode:"",
+  fullname:"",
+   clientname:"",
+   address1:"",
   userObject: "",
   isUserSignedIn: false,
   
@@ -25,11 +24,7 @@ const handleSignupServerResponseSuccess = (state, action) => {
   let newState = {};
   newState = Object.assign({}, state, {
     isUserSignedIn: true,
-    username: "yashu is great",
-  firstname: "yashu",
-  lastname: " is great",
-  emailId: "yashu",
-  password: "yashupassword",
+   firstname:"wini",
     userObject: { username : "yashu"  } //action.result
   });
   return { ...newState };

@@ -55,7 +55,7 @@ class Worksite extends React.Component {
         return (
 
 
-<div class="ui three column grid">
+{/* <div class="ui three column grid">
 <div>
 <h5> *Please provide work site information</h5>
 </div>
@@ -141,7 +141,7 @@ class Worksite extends React.Component {
 <div class="three wide column"></div>
 <div class="three wide column"></div>
 
-</div>
+</div> */}
         );
     }
 }

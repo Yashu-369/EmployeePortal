@@ -6,12 +6,13 @@ import { GetDataFromServer } from "../service";
 export function* fetchSignupUser(action) {
   try {
     let formBody = {};
-    formBody.email = action.username;
-    formBody.password = action.password;
+    formBody.firstname = action.firstname;
+    formBody.middlename = action.middlename;
+    formBody.lastname = action.lastname;
     const reqMethod = "POST";
     const response = yield call(
       GetDataFromServer,
-      API.LOGIN_USER_API,
+      API.SIGNUP_USER_API,
       reqMethod,
       formBody
     );
@@ -33,10 +34,9 @@ export function* fetchSignupUser(action) {
 export function* storeUser(action) {
   try {
     let formBody = {};
-    formBody.firstName = action.firstName;
-    formBody.lastName = action.lastName;
-    formBody.email = action.email;
-    formBody.password = action.password;
+    formBody.firstname = action.firstname;
+    formBody.middlename = action.middlename;
+    formBody.lastname = action.lastname;
     const reqMethod = "POST";
     const response = yield call(
       GetDataFromServer,

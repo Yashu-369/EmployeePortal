@@ -55,7 +55,7 @@ class CountryAddress extends React.Component {
         return (
 
 
-<div class="ui three column grid">
+{/* <div class="ui three column grid">
 <div>
 <h5> *Please provide address from your home country</h5>
 </div>
@@ -125,7 +125,7 @@ class CountryAddress extends React.Component {
 <div class="three wide column"></div>
 <div class="three wide column"></div>
 
-</div>
+</div> */}
         );
     }
 }

@@ -54,7 +54,7 @@ class USemergency extends React.Component {
         return (
 
 
-<div class="ui two column grid">
+{/* <div class="ui two column grid">
 <div>
 <h5> *Please provide US emergency contact number</h5>
 </div>
@@ -118,7 +118,7 @@ class USemergency extends React.Component {
 <div class="two wide column"></div>
 
 
-</div>
+</div> */}
         );
     }
 }
