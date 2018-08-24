@@ -35,6 +35,19 @@ class SignUpPage extends React.Component {
     render() {
         return (
             <div > 
+                <div   className="App"  class="ui borderless menu">
+                <a class="item">HOME</a>
+                <a class="item">ABOUT US</a>
+                <a class="item">SERVICES</a>
+                <a class="item">INDUSTRY</a>
+                <a class="item">CAREERS</a>
+                <a class="item">BLOG</a>
+                <a class="item">CONTACT US</a>
+                <Button primary>Employee Login</Button>
+                </div>
+
+
+
                 <div  className="emp_headrer App"> 
                 <h1>Employee Registration</h1>
                 </div>
@@ -48,7 +61,7 @@ class SignUpPage extends React.Component {
                <Signupform  {...this.props} submit={this.submit}></Signupform>
 
                   <div  className="App"> 
-                 <Button primary onClick={this.submit}> Save </Button>
+                 <Button primary onClick={this.submit}> Register </Button>
                 </div>
                    
           
